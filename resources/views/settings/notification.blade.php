@@ -13,15 +13,15 @@
                 <div class="grid md:grid-cols-2 gap-x-5">
                     <div class="mb-5">
                         <label for="firebaseSecretKey" class="text-sm font-semibold mb-2 block text-neutral-900 dark:text-white">Firebase secret key</label>
-                        <input type="text" class="form-control rounded-lg" id="firebaseSecretKey" placeholder="Firebase secret key" value="AAAAxGHw9lE:APA91bHKj6OsrD6EhnG5p26oTiQkXvOxTZwZEfVuuuipyUSNM-a8NB_CugVwfvvaosOvWgFAhQJOLMvxtv7e3Sw8DYpaWKwJIN3kjyIPoNRAe541sBz3x7E6sXZkA-ebueqnQiqNtbdP">
+                        <input type="text" class="form-control rounded-lg" id="firebaseSecretKey" placeholder="Firebase secret key" value="{{ env('FIREBASE_SECRET_KEY') }}">
                     </div>
                     <div class="mb-5">
                         <label for="firebasePublicVapidKey" class="text-sm font-semibold mb-2 block text-neutral-900 dark:text-white">Firebase public vapid key (key pair)</label>
-                        <input type="text" class="form-control rounded-lg" id="firebasePublicVapidKey" placeholder="Firebase public vapid key (key pair)" value="BKAvKJbnB3QATdp8n1aUo_uhoNK3exVKLVzy7MP8VKydjjzthdlAWdlku6LQISxm4zA7dWoRACI9AHymf4V64kA">
+                        <input type="text" class="form-control rounded-lg" id="firebasePublicVapidKey" placeholder="Firebase public vapid key (key pair)" value="{{ env('FIREBASE_VAPID_KEY') }}">
                     </div>
                     <div class="mb-5">
                         <label for="firebaseAPIKey" class="text-sm font-semibold mb-2 block text-neutral-900 dark:text-white">Firebase  API Key</label>
-                        <input type="text" class="form-control rounded-lg" id="firebaseAPIKey" placeholder="Firebase  API Key" value="AIzaSyDg1xBSwmHKV0usIKxTFL5a6fFTb4s3XVM">
+                        <input type="text" class="form-control rounded-lg" id="firebaseAPIKey" placeholder="Firebase  API Key" value="{{ env('GOOGLE_API_KEY') }}">
                     </div>
                     <div class="mb-5">
                         <label for="firebaseAuthDomain" class="text-sm font-semibold mb-2 block text-neutral-900 dark:text-white">Firebase  AUTH Domain</label>
