@@ -14,7 +14,7 @@
                 <div class="flex flex-wrap items-center gap-3">
                     <img src="{{ asset('assets/images/currency/crypto-img1.png') }}" alt="" class="w-10 h-10 rounded-full shrink-0">
                     <div class="grow">
-                        <h6 class="text-xl mb-1">Bitcoin Andika</h6>
+                        <h6 class="text-xl mb-1">Bitcoin Andika Ebys</h6>
                         <p class="font-medium text-secondary-light mb-0">BTC</p>
                     </div>
                 </div>
