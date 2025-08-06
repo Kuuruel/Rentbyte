@@ -1720,7 +1720,7 @@ input:checked + .toggle-bg{
   font-size: 20px;
 }
 .icon-field .form-control{
-  padding-inline-start: 2.5rem;
+  padding-inline-start: 3rem;
 }
 .icon-field .form-control.form-control-lg ~ .icon{
   top: 18px;
