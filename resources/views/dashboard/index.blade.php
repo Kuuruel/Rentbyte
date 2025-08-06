@@ -13,7 +13,7 @@
             <div class="card-body p-5">
                 <div class="flex flex-wrap items-center justify-between gap-3">
                     <div>
-                        <p class="font-medium text-neutral-900 dark:text-white mb-1">Total Users</p>
+                        <p class="font-medium text-neutral-900 dark:text-white mb-1">Total Properti Jawir</p>
                         <h6 class="mb-0 dark:text-white">20,000</h6>
                     </div>
                     <div class="w-[50px] h-[50px] bg-cyan-600 rounded-full flex justify-center items-center">
