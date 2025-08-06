@@ -14,7 +14,7 @@
                     <div class="xl:col-span-12 2xl:col-span-6">
                         <div class="card-body p-6">
                             <div class="flex items-center flex-wrap gap-2 justify-between">
-                                <h6 class="mb-2 font-bold text-lg">Revenue Report</h6>
+                                <h6 class="mb-2 font-bold text-lg">Revenue Report Yudhi</h6>
                                 <div class="">
                                     <select class="form-select form-select-sm w-auto bg-white dark:bg-neutral-700 border text-secondary-light">
                                         <option>Yearly</option>
