@@ -18,7 +18,7 @@
                                     <iconify-icon icon="mingcute:user-follow-fill" class="icon"></iconify-icon>
                                 </span>
                                 <div>
-                                    <span class="mb-2 font-medium text-secondary-light text-sm">Anti-jawa</span>
+                                    <span class="mb-2 font-medium text-secondary-light text-sm">Anti-jawir</span>
                                     <h6 class="font-semibold">15,000</h6>
                                 </div>
                             </div>
