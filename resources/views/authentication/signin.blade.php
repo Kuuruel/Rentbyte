@@ -18,8 +18,8 @@
                     <a href="{{ route('index') }}" class="mb-2.5 max-w-[290px]">
                         <img src="{{ asset('assets/images/logo.png') }}" alt="">
                     </a>
-                    <h4 class="mb-3">Sign In to your Account</h4>
-                    <p class="mb-8 text-secondary-light text-lg">Welcome back! please enter your detail</p>
+                    <h4 class="mb-1">Sign In to your Account</h4>
+                    <p class="mb-8 text-secondary-light text-lg">Welcome back! Please enter your detail</p>
                 </div>
                 <form action="#">
                     <div class="icon-field mb-4 relative">
