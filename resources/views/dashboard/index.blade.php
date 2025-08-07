@@ -13,8 +13,8 @@
             <div class="card-body p-5">
                 <div class="flex flex-wrap items-center justify-between gap-3">
                     <div>
-                        <p class="font-medium text-neutral-900 dark:text-white mb-1">Total Properti Yudhi</p>
-                        <h6 class="mb-0 dark:text-white">50,000</h6>
+                        <p class="font-medium text-neutral-900 dark:text-white mb-1">Users</p>
+                        <h6 class="mb-0 dark:text-white">50</h6>
                     </div>
                     <div class="w-[50px] h-[50px] bg-cyan-600 rounded-full flex justify-center items-center">
                         <iconify-icon icon="gridicons:multiple-users" class="text-white text-2xl mb-0"></iconify-icon>
@@ -30,7 +30,7 @@
             <div class="card-body p-5">
                 <div class="flex flex-wrap items-center justify-between gap-3">
                     <div>
-                        <p class="font-medium text-neutral-900 dark:text-white mb-1">Total Jawir</p>
+                        <p class="font-medium text-neutral-900 dark:text-white mb-1">Properties</p>
                         <h6 class="mb-0 dark:text-white">15,000</h6>
                     </div>
                     <div class="w-[50px] h-[50px] bg-purple-600 rounded-full flex justify-center items-center">
@@ -120,7 +120,7 @@
                 </div>
             </div>
         </div>
-        <div class="xl:col-span-6 2xl:col-span-3">
+        {{-- <div class="xl:col-span-6 2xl:col-span-3">
             <div class="card h-full rounded-lg border-0">
                 <div class="card-body p-6">
                     <h6 class="mb-3 font-semibold text-lg">Total Subscriber</h6>
@@ -644,7 +644,7 @@
 
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
 @endsection
