@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tenants', function (Blueprint $table) {
+        Schema::create('admin', function (Blueprint $table) {
             $table->id(); // Primary key auto-increment
             $table->string('name'); // Nama pemilik properti/bisnis
-            $table->string('email')->unique(); // Email, harus unik untuk setiap tenant
-            $table->string('password'); // Password untuk login tenant
-            $table->timestamps();
+            $table->timestamps();   
             $table->unsignedBigInteger('user_id');
-
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
@@ -28,6 +25,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tenants');
+        Schema::table('admin', function (Blueprint $table) {
+            Schema::dropIfExists('admin');
+        });
     }
 };

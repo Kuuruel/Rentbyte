@@ -15,25 +15,26 @@
         <div class="lg:w-1/2 py-8 px-6 flex flex-col justify-center">
             <div class="lg:max-w-[464px] mx-auto w-full">
                 <div>
-                    <a href="{{ route('index') }}" class="mb-2.5 max-w-[290px]">
+                    <a href="{{ route('super-admin.index') }}" class="mb-2.5 max-w-[290px]">
                         <img src="{{ asset('assets/images/logo.png') }}" alt="">
                     </a>
                     <h4 class="mb-1">Sign In to your Account</h4>
                     <p class="mb-8 text-secondary-light text-lg">Welcome back! Please enter your detail</p>
                 </div>
-                <form action="#">
+                <form action="{{route('signin')}}" method="POST">
+                        @csrf
                     <div class="icon-field mb-4 relative">
                         <span class="absolute start-4 top-1/2 -translate-y-1/2 pointer-events-none flex text-xl">
                             <iconify-icon icon="mage:email"></iconify-icon>
                         </span>
-                        <input type="email" class="form-control h-[56px] ps-11 border-neutral-300 bg-neutral-50 dark:bg-dark-2 rounded-xl" placeholder="Email">
+                        <input type="email" name="email" class="form-control h-[56px] ps-11 border-neutral-300 bg-neutral-50 dark:bg-dark-2 rounded-xl" placeholder="Email" required>
                     </div>
                     <div class="relative mb-5">
                         <div class="icon-field">
                             <span class="absolute start-4 top-1/2 -translate-y-1/2 pointer-events-none flex text-xl">
                                 <iconify-icon icon="solar:lock-password-outline"></iconify-icon>
                             </span>
-                            <input type="password" class="form-control h-[56px] ps-11 border-neutral-300 bg-neutral-50 dark:bg-dark-2 rounded-xl" id="your-password" placeholder="Password">
+                            <input type="password" name="password" class="form-control h-[56px] ps-11 border-neutral-300 bg-neutral-50 dark:bg-dark-2 rounded-xl" id="your-password" placeholder="Password" required>
                         </div>
                         <span class="toggle-password ri-eye-line cursor-pointer absolute end-0 top-1/2 -translate-y-1/2 me-4 text-secondary-light" data-toggle="#your-password"></span>
                     </div>

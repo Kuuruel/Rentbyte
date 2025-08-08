@@ -13,10 +13,11 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CryptocurrencyController;
+use App\Http\Controllers\SuperAdminController;
+use App\Http\Controllers\LandlordController;
 
-Route::controller(DashboardController::class)->group(function () {
-    Route::get('/', 'index')->name('index');
-});
+
+Route::get('/', [SuperAdminController::class, 'index'])->name('super-admin.index');
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('calendar-Main','calendarMain')->name('calendarMain');
@@ -47,15 +48,16 @@ Route::prefix('aiapplication')->group(function () {
         Route::get('/text-generatornew','textGeneratorNew')->name('textGeneratorNew');
         Route::get('/video-generator','videoGenerator')->name('videoGenerator');
         Route::get('/voice-generator','voiceGenerator')->name('voiceGenerator');
-    });
+});
 });
 
 // Authentication
 Route::prefix('authentication')->group(function () {
     Route::controller(AuthenticationController::class)->group(function () {
         Route::get('/forgot-password', 'forgotPassword')->name('forgotPassword');
-        Route::get('/sign-in', 'signin')->name('signin');
+        Route::get('/sign-in', 'showSigninForm')->name('showSigninForm');
         Route::get('/sign-up', 'signup')->name('signup');
+        Route::post('/sign-in', 'signin')->name('signin');
     });
 });
 
@@ -102,18 +104,31 @@ Route::prefix('cryptocurrency')->group(function () {
     });
 });
 
-// Dashboard
-Route::prefix('dashboard')->group(function () {
-    Route::controller(DashboardController::class)->group(function () {
-        Route::get('/index', 'index')->name('index');
-        Route::get('/index-2', 'index2')->name('index2');
-        Route::get('/index-3', 'index3')->name('index3');
-        Route::get('/index-4', 'index4')->name('index4');
-        Route::get('/index-5','index5')->name('index5');
-        Route::get('/index-6','index6')->name('index6');
-        Route::get('/index-7','index7')->name('index7');
-        Route::get('/index-8','index8')->name('index8');
-        Route::get('/index-9','index9')->name('index9');
+Route::prefix('super-admin')->group(function () {
+    Route::controller(SuperAdminController::class)->group(function () {
+        Route::get('/', 'index')->name('super-admin.index');
+        Route::get('/index2', 'index2')->name('super-admin.index2');
+        Route::get('/index3', 'index3')->name('super-admin.index3');
+        Route::get('/index4', 'index4')->name('super-admin.index4');
+        Route::get('/index5', 'index5')->name('super-admin.index5');
+        Route::get('/index6', 'index6')->name('super-admin.index6');
+        Route::get('/index7', 'index7')->name('super-admin.index7');
+        Route::get('/index8', 'index8')->name('super-admin.index8');
+        Route::get('/index9', 'index9')->name('super-admin.index9');
+    });
+});
+
+Route::prefix('landlord')->group(function () {
+    Route::controller(LandlordController::class)->group(function () {
+        Route::get('/', 'index')->name('landlord.index');
+        Route::get('/index2', 'index2')->name('landlord.index2');
+        Route::get('/index3', 'index3')->name('landlord.index3');
+        Route::get('/index4', 'index4')->name('landlord.index4');
+        Route::get('/index5', 'index5')->name('landlord.index5');
+        Route::get('/index6', 'index6')->name('landlord.index6');
+        Route::get('/index7', 'index7')->name('landlord.index7');
+        Route::get('/index8', 'index8')->name('landlord.index8');
+        Route::get('/index9', 'index9')->name('landlord.index9');
     });
 });
 

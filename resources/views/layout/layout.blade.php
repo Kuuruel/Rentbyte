@@ -7,7 +7,7 @@
 <body class="dark:bg-neutral-800 bg-neutral-100 dark:text-white">
 
     <!-- ..::  header area start ::.. -->
-    <x-sidebar />
+    <x-sidebar-admin />
     <!-- ..::  header area end ::.. -->
 
     <main class="dashboard-main">
