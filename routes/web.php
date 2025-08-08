@@ -13,6 +13,8 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CryptocurrencyController;
+use App\Http\Controllers\TenantController;
+use App\Http\Controllers\PropertyController;
 
 Route::controller(DashboardController::class)->group(function () {
     Route::get('/', 'index')->name('index');
@@ -167,3 +169,24 @@ Route::prefix('users')->group(function () {
         Route::get('/view-profile', 'viewProfile')->name('viewProfile');
     });
 });
+
+// tenants
+Route::prefix('tenants')->group(function () {
+    Route::controller(TenantController::class)->group(function () {
+        Route::get('/create', 'create')->name('tenants.create');
+        Route::post('/store', 'store')->name('tenants.store');
+    });
+});
+
+// properties
+Route::prefix('properties')->group(function () {
+    Route::controller(PropertyController::class)->group(function () {
+Route::get('/dashboard/index-5', [PropertyController::class, 'create'])->name('properties.create');
+Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
+
+        Route::resource('properties', PropertyController::class);
+
+    });
+});
+
+
